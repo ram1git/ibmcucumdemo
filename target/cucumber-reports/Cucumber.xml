@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="47.420182">
+    <testcase classname="Registration of elearning website" name="_2" time="21.69611">
+        <system-out><![CDATA[Given http://elearningm1.upskills.in/index.php the_url_opened...............passed
+When user clicks signup button..............................................passed
+Then user fills the form with values "firstname" "lastname" "email" "code" "username" "pass" "confirm" "phone" "language".passed
+Then user clicks register button............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Registration of elearning website and coupon creation and deletion" name="_2" time="25.724072">
+        <system-out><![CDATA[When user logins with his credentials "admin" and "Admin@123"...............passed
+And lands on the dashboard page.............................................passed
+Then user clicks coupons link on the page...................................passed
+When user adds the coupons with "john" and "doe" and then saves.............passed
+Then coupons names are successfully created.................................passed
+When user edits the selected coupon and then saves the same.................passed
+Then the edited coupons are successfully saved..............................passed
+When user selcts the created coupn and deletes the same.....................passed
+Then coupon is successfully deleted.........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

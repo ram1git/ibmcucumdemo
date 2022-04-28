@@ -1,0 +1,307 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "line": 23,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2502278300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "http://elearningm1.upskills.in/index.php the_url_opened",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 17
+                }
+              ],
+              "location": "Registration.http_elearningm_upskills_in_index_php_the_url_opened(Integer)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-27T14:43:00.777Z",
+        "before": [
+          {
+            "result": {
+              "duration": 14178626900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Registration.before()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "",
+        "description": "",
+        "id": "registration-of-elearning-website;",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3837200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user clicks signup button",
+            "match": {
+              "location": "Registration.user_clicks_signup_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2998416200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user fills the form with values \"firstname\" \"lastname\" \"email\" \"code\" \"username\" \"pass\" \"confirm\" \"phone\" \"language\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"firstname\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"lastname\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"email\"",
+                  "offset": 55
+                },
+                {
+                  "val": "\"code\"",
+                  "offset": 63
+                },
+                {
+                  "val": "\"username\"",
+                  "offset": 70
+                },
+                {
+                  "val": "\"pass\"",
+                  "offset": 81
+                },
+                {
+                  "val": "\"confirm\"",
+                  "offset": 88
+                },
+                {
+                  "val": "\"phone\"",
+                  "offset": 98
+                },
+                {
+                  "val": "\"language\"",
+                  "offset": 106
+                }
+              ],
+              "location": "Registration.user_fills_the_form_with_values(String,String,String,String,String,String,String,String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2001756200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user clicks register button",
+            "match": {
+              "location": "Registration.user_clicks_register_button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tagreg"
+          }
+        ]
+      }
+    ],
+    "name": "Registration of elearning website",
+    "description": "  I want to use this template for my feature file",
+    "id": "registration-of-elearning-website",
+    "keyword": "Feature",
+    "uri": "file:elearningregistration.feature",
+    "tags": []
+  },
+  {
+    "line": 19,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-27T14:43:22.507Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9720700300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Registrationnew.before()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "",
+        "description": "",
+        "id": "registration-of-elearning-website-and-coupon-creation-and-deletion;;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3616960900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user logins with his credentials \"admin\" and \"Admin@123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"admin\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"Admin@123\"",
+                  "offset": 45
+                }
+              ],
+              "location": "Registrationnew.user_logins_with_his_credentials_and(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2920394800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "lands on the dashboard page",
+            "match": {
+              "location": "Registrationnew.lands_on_the_dashboard_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1558289700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user clicks coupons link on the page",
+            "match": {
+              "location": "Registrationnew.user_clicks_coupons_link_on_the_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 952822600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user adds the coupons with \"john\" and \"doe\" and then saves",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"john\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"doe\"",
+                  "offset": 38
+                }
+              ],
+              "location": "Registrationnew.user_adds_the_coupons_with_and_and_then_saves(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1786935100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "coupons names are successfully created",
+            "match": {
+              "location": "Registrationnew.coupons_names_are_successfully_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 391188200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user edits the selected coupon and then saves the same",
+            "match": {
+              "location": "Registrationnew.user_edits_the_selected_coupon_and_then_saves_the_same()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1469583100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the edited coupons are successfully saved",
+            "match": {
+              "location": "Registrationnew.the_edited_coupons_are_successfully_saved()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2578709400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user selcts the created coupn and deletes the same",
+            "match": {
+              "location": "Registrationnew.user_selcts_the_created_coupn_and_deletes_the_same()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 727240400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "coupon is successfully deleted",
+            "match": {
+              "location": "Registrationnew.coupon_is_successfully_deleted()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tagregnew"
+          }
+        ]
+      }
+    ],
+    "name": "Registration of elearning website and coupon creation and deletion",
+    "description": "  I want to use this template for my feature file",
+    "id": "registration-of-elearning-website-and-coupon-creation-and-deletion",
+    "keyword": "Feature",
+    "uri": "file:elearningregistrationnew.feature",
+    "tags": []
+  }
+]
