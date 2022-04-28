@@ -110,7 +110,7 @@ Assert.assertEquals(title, "Coupons");
 		System.out.println(string2);
 		dr.findElement(By.xpath(prop.getProperty("cpname"))).sendKeys(string);
 		dr.findElement(By.xpath(prop.getProperty("code"))).sendKeys(string2);
-		log.info("user clicks coupons link on the page");
+		log.info("user adds the coupons with {string} and {string} and then saves");
 	    
 	}
 
