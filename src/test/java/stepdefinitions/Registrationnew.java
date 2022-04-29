@@ -4,16 +4,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -58,6 +61,8 @@ public class Registrationnew {
 		dr=new ChromeDriver();
 	//	dr.get("http://uitestingplayground.com/");
 		dr.get(prop.getProperty("url2"));
+		dr.manage().window().maximize();
+		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	//	dr.findElement(By.xpath(prop.getProperty("login"))).click();
 		
 	//	PropertyConfigurator.configure("C:\\Users\\001ZBY744\\eclipse-workspace\\project\\log4j.properties");
@@ -126,7 +131,7 @@ Assert.assertEquals(title, "Coupons");
 	public void user_edits_the_selected_coupon_and_then_saves_the_same() {
 	    // Write code here that turns the phrase above into concrete actions
 		//*[@id="form-coupon"]/div/table/tbody/tr[13]/td[1]/input
-		dr.findElement(By.xpath(prop.getProperty("select"))).click();
+	//	dr.findElement(By.xpath(prop.getProperty("select"))).click();
 		log.info("user edits the selected coupon and then saves the same");
 	    
 	}
@@ -134,16 +139,26 @@ Assert.assertEquals(title, "Coupons");
 	@Then("the edited coupons are successfully saved")
 	public void the_edited_coupons_are_successfully_saved() {
 	    // Write code here that turns the phrase above into concrete actions
-		dr.findElement(By.xpath(prop.getProperty("edit"))).click();
+		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	//	dr.findElement(By.xpath(prop.getProperty("edit"))).click();
+		dr.findElement(By.xpath("//*[@id=\"form-coupon\"]/div/table/tbody/tr[2]")).click();
 		log.info("the edited coupons are successfully saved");
 	}
 
 	@When("user selcts the created coupn and deletes the same")
 	public void user_selcts_the_created_coupn_and_deletes_the_same() {
 	    // Write code here that turns the phrase above into concrete actions
-		
-		dr.findElement(By.xpath(prop.getProperty("cpname"))).sendKeys("asdf");
-		dr.findElement(By.xpath(prop.getProperty("code"))).sendKeys("qwert");
+		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		dr.findElement(By.xpath("//*[@id=\"form-coupon\"]/div/table/tbody/tr[5]/td[1]")).click();
+		dr.findElement(By.xpath("//*[@id=\"form-coupon\"]/div/table/tbody/tr[2]/td[8]")).click();
+		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		dr.findElement(By.xpath(prop.getProperty("cpname"))).sendKeys(Keys.CLEAR);
+		dr.findElement(By.xpath(prop.getProperty("code"))).sendKeys(Keys.CLEAR);
+		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		/*
+		 * dr.findElement(By.xpath(prop.getProperty("cpname"))).sendKeys("johntest");
+		 * dr.findElement(By.xpath(prop.getProperty("code"))).sendKeys("johntest123");
+		 */
 		dr.findElement(By.xpath(prop.getProperty("save"))).click();
 		log.info("user selcts the created coupn and deletes the same");
 	    
@@ -156,8 +171,18 @@ Assert.assertEquals(title, "Coupons");
 		dr.findElement(By.xpath(prop.getProperty("del"))).click();
 		dr.switchTo().alert().accept();
 		log.info("coupon is successfully deleted");
+	System.out.println(dr.findElement(By.xpath("/html/body/div/div/div[2]/div[1][contains(text(),' Success: You have modified coupons!      ')]")).isDisplayed());
+	Assert.assertEquals(dr.findElement(By.xpath("/html/body/div/div/div[2]/div[1][contains(text(),' Success: You have modified coupons!      ')]")).isDisplayed(), true);	
 	    
 	}
 
+	
+@After("@tagregnew")
+	
+	public void after() {
+	log.info("closing the second browser tagged to the scenario");
+	//	dr.close();
+		
+	}
 
 }

@@ -1,10 +1,8 @@
-2022-04-27 20:13:32 INFO  Registrationnew:65 - initializations done and url http://retailm1.upskills.in/admin/index.php is getting opened
-2022-04-27 20:13:35 INFO  Registrationnew:77 - user logins with his credentials
-2022-04-27 20:13:37 INFO  Registrationnew:86 - lands on the dashboard page
-2022-04-27 20:13:40 INFO  Registrationnew:101 - user clicks coupons link on the page
-2022-04-27 20:13:41 INFO  Registrationnew:113 - user clicks coupons link on the page
-2022-04-27 20:13:43 INFO  Registrationnew:121 - coupons names are successfully created
-2022-04-27 20:13:43 INFO  Registrationnew:130 - user edits the selected coupon and then saves the same
-2022-04-27 20:13:44 INFO  Registrationnew:138 - the edited coupons are successfully saved
-2022-04-27 20:13:47 INFO  Registrationnew:148 - user selcts the created coupn and deletes the same
-2022-04-27 20:13:48 INFO  Registrationnew:158 - coupon is successfully deleted
+2022-04-28 18:40:34 INFO  Registrationnew:70 - initializations done and url http://retailm1.upskills.in/admin/index.php is getting opened
+2022-04-28 18:40:35 INFO  Registrationnew:82 - user logins with his credentials
+2022-04-28 18:40:35 INFO  Registrationnew:91 - lands on the dashboard page
+2022-04-28 18:40:36 INFO  Registrationnew:106 - user clicks coupons link on the page
+2022-04-28 18:40:36 INFO  Registrationnew:118 - user adds the coupons with {string} and {string} and then saves
+2022-04-28 18:40:37 INFO  Registrationnew:126 - coupons names are successfully created
+2022-04-28 18:40:37 INFO  Registrationnew:135 - user edits the selected coupon and then saves the same
+2022-04-28 18:40:47 INFO  Registrationnew:183 - closing the second browser tagged to the scenario

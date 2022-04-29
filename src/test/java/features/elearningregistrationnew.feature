@@ -33,4 +33,4 @@ Feature: Registration of elearning website and coupon creation and deletion
 
     Examples: 
       | couponname | code |
-      | john       | doe  |
+      | john1       | doe1  |

@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -65,6 +66,7 @@ public class Registration {
 		dr=new ChromeDriver();
 	//	dr.get("http://uitestingplayground.com/");
 		dr.get(prop.getProperty("url1"));
+		dr.manage().window().maximize();
 	//	dr.findElement(By.xpath(prop.getProperty("login"))).click();
 		
 	//	PropertyConfigurator.configure("C:\\Users\\001ZBY744\\eclipse-workspace\\project\\log4j.properties");
@@ -116,7 +118,17 @@ public class Registration {
 	String exp=	dr.findElement(By.xpath(prop.getProperty("assert1"))).getText();
 		
 		Assert.assertEquals(exp, dr.findElement(By.xpath(prop.getProperty("assert1"))).getText());
+		System.out.println(exp+ "---expected value is ------");
 	    
 	}
-
+	
+	@After("@tagreg")
+	
+	public void after() {
+		
+		log.info("closing the first browser tagged to the scenario");
+		
+		dr.close();
+		
+	}
 }
