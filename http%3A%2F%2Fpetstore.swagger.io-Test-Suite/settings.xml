@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="26d8afee-717b-42a8-9cf0-c4827d62f1a1" name="http://petstore.swagger.io Test Suite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="26d8afee-717b-42a8-9cf0-c4827d62f1a1fileName">http%3A%2F%2Fpetstore.swagger.io-Test-Suite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

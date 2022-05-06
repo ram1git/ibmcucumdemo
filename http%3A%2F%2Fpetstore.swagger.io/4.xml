@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="4" path="/v2/user/{username}" id="e103cf00-f36c-4ad2-8080-43d443544a36" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e103cf00-f36c-4ad2-8080-43d443544a36fileName">4</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>username</con:name>
+      <con:value>username</con:value>
+      <con:style>TEMPLATE</con:style>
+      <con:default>username</con:default>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="Method 1" id="1286a442-7f5c-4033-a347-270796e3143a" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="2e90dad8-a594-4eb2-b276-7e5ffed96d28" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="username" value="username"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>username</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

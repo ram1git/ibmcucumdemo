@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="2" path="/v2/user/login" id="8aa53dd6-bc7f-4edd-9cbd-fe6440475cee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8aa53dd6-bc7f-4edd-9cbd-fe6440475ceefileName">2</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="84c9d03f-9592-4c79-b423-ee0f07ebd42c" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>username</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>password</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:log="https://petstore.swagger.io/v2/user/login">log:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="2af44b1d-b959-451c-b9a3-32e42808f220" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://petstore.swagger.io</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="password" value="ram123"/>
+        <con:entry key="username" value="ananth"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>username</con:entry>
+        <con:entry>password</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
